@@ -1052,12 +1052,12 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                        R(this, -1),
+                                        // R(this, -1),
                                         e = Object.keys(this._participants),
                                         t = Object.values(this._participants);
                                         return (
                                             t.forEach((t, n) => {
-                                                delete t.participantId == e[n];
+                                                delete t.participantId;
                                             }),
                                             t
                                         );
