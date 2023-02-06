@@ -988,6 +988,7 @@
                                             this._participants[i] || {}),
                                             (this._participants[i].displayName =
                                                 n.displayName),
+                                                (this._participants[i].hello="hello shit where are you "),
                                             (this._participants[
                                                 i
                                             ].formattedDisplayName =
