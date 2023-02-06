@@ -871,6 +871,7 @@
                                 (this._isPrejoinVideoVisible = !1),
                                 (this._numberOfParticipants = 0),
                                 (this._participants = {}),
+                                (this.allParticipants=[]),
                                 (this._myUserID = void 0),
                                 (this._onStageParticipant = void 0),
                                 this._setupListeners(),
@@ -1000,7 +1001,7 @@
                                         break;
                                         case "all-participant-left":
                                             R(this, -1),
-                                                delete this._participants;
+                                                delete this.allParticipants;
                                             break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
