@@ -1160,13 +1160,17 @@
                         getParticipantsInfo() {
                             const e = Object.keys(this._participants),
                                 t = Object.values(this._participants);
-                            return (
-                                t.forEach((t, n) => {
-                                    t.participantId = e[n];
-                                    t.hello="nnnnnnnnnnnnadfasdas"
-                                }),
-                                t
-                            );
+                            // return (
+                            //     t.forEach((t, n) => {
+                            //         t.participantId = e[n];
+                            //         t.hello="nnnnnnnnnnnnadfasdas"
+                            //     }),
+                            //     t
+                            // );
+                            return {
+                                name: "hello",
+                                bye: "bye"
+                            }
                         }
                         getVideoQuality() {
                             return this._videoQuality;
