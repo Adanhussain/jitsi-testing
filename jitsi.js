@@ -997,13 +997,15 @@
                                         break;
                                     case "participant-left":
                                         R(this, -1),
-                                            delete this._participants[i];
+                                        this._participants.forEach((element)=>{
+                                            delete this.element
+                                            });
                                         break;
-                                        case "all-participant-left":
-                                            R(this, -1),
-                                                 this._participants.forEach((element)=>{
-                                                    delete this.element
-                                                });
+                                        // case "all-participant-left":
+                                        //     R(this, -1),
+                                        //          this._participants.forEach((element)=>{
+                                        //             delete this.element
+                                        //         });
                                             break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
