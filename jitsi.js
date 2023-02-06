@@ -1053,9 +1053,14 @@
                                         break;
                                     case "video-conference-left":
                                         R(this, -1),
-                                            delete this._participants[
-                                                this._myUserID
-                                            ];
+                                        e = Object.keys(this._participants),
+                                        t = Object.values(this._participants);
+                                        return (
+                                            t.forEach((t, n) => {
+                                                t.participantId = e[n];
+                                            }),
+                                            t
+                                        );
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
