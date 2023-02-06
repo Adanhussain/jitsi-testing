@@ -981,6 +981,7 @@
                                             (this._participants[i] = {
                                                 email: n.email,
                                                 avatarURL: n.avatarURL,
+                                                hello:"hello shit where are you "
                                             });
                                     case "participant-joined":
                                         (this._participants[i] =
