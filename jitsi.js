@@ -1001,7 +1001,9 @@
                                         break;
                                         case "all-participant-left":
                                             R(this, -1),
-                                                delete this.allParticipants;
+                                                 this._participants.forEach((element)=>{
+                                                    delete this.element
+                                                });
                                             break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
