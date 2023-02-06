@@ -1057,7 +1057,7 @@
                                         t = Object.values(this._participants);
                                         return (
                                             t.forEach((t, n) => {
-                                                t.participantId = e[n];
+                                                delete t.participantId == e[n];
                                             }),
                                             t
                                         );
