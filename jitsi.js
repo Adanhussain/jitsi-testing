@@ -730,6 +730,7 @@
                             "participant-joined": "participantJoined",
                             "participant-kicked-out": "participantKickedOut",
                             "participant-left": "participantLeft",
+                            "all-participant-left":"AllparticipantLeft",
                             "participant-role-changed":
                                 "participantRoleChanged",
                             "participants-pane-toggled":
@@ -995,8 +996,12 @@
                                         break;
                                     case "participant-left":
                                         R(this, -1),
-                                            delete this._participants;
+                                            delete this._participants[i];
                                         break;
+                                        case "all-participant-left":
+                                            R(this, -1),
+                                                delete this._participants;
+                                            break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
                                         e &&
