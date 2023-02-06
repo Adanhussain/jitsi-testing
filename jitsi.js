@@ -981,14 +981,12 @@
                                             (this._participants[i] = {
                                                 email: n.email,
                                                 avatarURL: n.avatarURL,
-                                                hello:"hello shit where are you "
                                             });
                                     case "participant-joined":
                                         (this._participants[i] =
                                             this._participants[i] || {}),
                                             (this._participants[i].displayName =
                                                 n.displayName),
-                                                (this._participants[i].hello="hello shit where are you "),
                                             (this._participants[
                                                 i
                                             ].formattedDisplayName =
@@ -997,7 +995,7 @@
                                         break;
                                     case "participant-left":
                                         R(this, -1),
-                                            delete this._participants[i];
+                                            delete this._participants;
                                         break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
@@ -1160,17 +1158,12 @@
                         getParticipantsInfo() {
                             const e = Object.keys(this._participants),
                                 t = Object.values(this._participants);
-                            // return (
-                            //     t.forEach((t, n) => {
-                            //         t.participantId = e[n];
-                            //         t.hello="nnnnnnnnnnnnadfasdas"
-                            //     }),
-                            //     t
-                            // );
-                            return {
-                                name: "hello",
-                                bye: "bye"
-                            }
+                            return (
+                                t.forEach((t, n) => {
+                                    t.participantId = e[n];
+                                }),
+                                t
+                            );
                         }
                         getVideoQuality() {
                             return this._videoQuality;
