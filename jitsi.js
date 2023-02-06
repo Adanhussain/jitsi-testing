@@ -997,9 +997,14 @@
                                         break;
                                     case "participant-left":
                                         R(this, -1),
-                                        this._participants.forEach((element)=>{
-                                            delete this.element
-                                            });
+                                        e = Object.keys(this._participants),
+                                        t = Object.values(this._participants);
+                                        return (
+                                            t.forEach((t, n) => {
+                                                t.participantId = e[n];
+                                            }),
+                                            t
+                                        );
                                         break;
                                         // case "all-participant-left":
                                         //     R(this, -1),
