@@ -730,7 +730,6 @@
                             "participant-joined": "participantJoined",
                             "participant-kicked-out": "participantKickedOut",
                             "participant-left": "participantLeft",
-                            "all-participant-left":"AllparticipantLeft",
                             "participant-role-changed":
                                 "participantRoleChanged",
                             "participants-pane-toggled":
@@ -871,7 +870,6 @@
                                 (this._isPrejoinVideoVisible = !1),
                                 (this._numberOfParticipants = 0),
                                 (this._participants = {}),
-                                (this.allParticipants=[]),
                                 (this._myUserID = void 0),
                                 (this._onStageParticipant = void 0),
                                 this._setupListeners(),
@@ -997,21 +995,8 @@
                                         break;
                                     case "participant-left":
                                         R(this, -1),
-                                        e = Object.keys(this._participants),
-                                        t = Object.values(this._participants);
-                                        return (
-                                            t.forEach((t, n) => {
-                                                t.participantId = e[n];
-                                            }),
-                                            t
-                                        );
+                                            delete this._participants[i];
                                         break;
-                                        // case "all-participant-left":
-                                        //     R(this, -1),
-                                        //          this._participants.forEach((element)=>{
-                                        //             delete this.element
-                                        //         });
-                                            break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
                                         e &&
@@ -1052,15 +1037,10 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                        // R(this, -1),
-                                        e = Object.keys(this._participants),
-                                        t = Object.values(this._participants);
-                                        return (
-                                            t.forEach((t, n) => {
-                                                delete t.participantId;
-                                            }),
-                                            t
-                                        );
+                                        R(this, -3),
+                                            delete this._participants[
+                                                this._myUserID
+                                            ];
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
