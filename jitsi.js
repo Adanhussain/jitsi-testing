@@ -1001,7 +1001,7 @@
                                     case "participant-left":
                                         R(this, -1),
                                             delete this._participants[i];
-                                           window.location.href='org.jitsi.meet'
+                                        //    window.location.href='org.jitsi.meet'
                                         break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
