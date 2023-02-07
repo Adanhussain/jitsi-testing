@@ -1038,9 +1038,7 @@
                                         break;
                                     case "video-conference-left":
                                         R(this, -3),
-                                            delete this._participants[
-                                                this._myUserID
-                                            ];
+                                            delete this._numberOfParticipants;
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
