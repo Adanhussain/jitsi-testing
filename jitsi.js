@@ -1040,13 +1040,14 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                        R(this, -1),
-                                            delete this._participants[
-                                                this._myUserID
-                                            ];
-                                            return {
-                                                hello:"hhhhhhhhhh"
-                                            }
+                                        // R(this, -1),
+                                        //     delete this._participants[
+                                        //         this._myUserID
+                                        //     ];
+                                          return {
+                                              name:"ddddd",
+                                              hun:"adada"
+                                          }
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
