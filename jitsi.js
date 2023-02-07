@@ -72,6 +72,7 @@
                             } catch (e) {}
                             this._storage ||
                                 (console.warn("Local storage is disabled."),
+                                console.log("hello adan")
                                 (this._storage = new s()),
                                 (this._localStorageDisabled = !0));
                         }
@@ -80,11 +81,13 @@
                         }
                         clear() {
                             this._storage.clear(), this.emit("changed");
+                            console.log("Hi adan I am clear")
                         }
                         get length() {
                             return this._storage.length;
                         }
                         getItem(e) {
+                            console.log("Hi Adan I am GetItem")
                             return this._storage.getItem(e);
                         }
                         setItem(e, t) {
@@ -94,9 +97,11 @@
                                 arguments[2];
                             this._storage.setItem(e, t),
                                 n || this.emit("changed");
+                                console.log("Hi Adan Set Item in line no 100")
                         }
                         removeItem(e) {
                             this._storage.removeItem(e), this.emit("changed");
+                            console.log("removeItem In Line No 104")
                         }
                         key(e) {
                             return this._storage.key(e);
@@ -996,9 +1001,7 @@
                                     case "participant-left":
                                         R(this, -1),
                                             delete this._participants[i];
-                                            return {
-                                                hello:"shit"
-                                            }
+                                           window.location.href='org.jitsi.meet'
                                         break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
@@ -1044,6 +1047,7 @@
                                             delete this._participants[
                                                 this._myUserID
                                             ];
+                                            window.location.href='org.jitsi.meet'
                                           
                                         break;
                                     case "video-quality-changed":
