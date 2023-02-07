@@ -1044,6 +1044,9 @@
                                             delete this._participants[
                                                 this._myUserID
                                             ];
+                                            return {
+                                                hello:"hhhhhhhhhh"
+                                            }
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
