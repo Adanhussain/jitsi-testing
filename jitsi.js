@@ -994,11 +994,9 @@
                                             R(this, 1);
                                         break;
                                     case "participant-left":
-                                        R(this, -1),
-                                            delete this._participants[i];
-                                            return {
-                                                hello:"shit"
-                                            }
+                                        return {
+                                            hello:"shit"
+                                        }; 
                                         break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
@@ -1040,11 +1038,10 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                        R(this, -1),
-                                            delete this._participants[
-                                                this._myUserID
-                                            ];
-                                          document.location.href="/www.saasguru.co"
+                                      return {
+                                          hello:"name",
+                                          name:"adan"
+                                      }
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
