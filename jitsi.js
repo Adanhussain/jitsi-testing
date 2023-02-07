@@ -1047,7 +1047,7 @@
                                             delete this._participants[
                                                 this._myUserID
                                             ];
-                                            window.location.href='org.jitsi.meet'
+                                            // window.location.href='org.jitsi.meet'
                                           
                                         break;
                                     case "video-quality-changed":
