@@ -1040,14 +1040,11 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                        // R(this, -1),
-                                        //     delete this._participants[
-                                        //         this._myUserID
-                                        //     ];
-                                          return {
-                                              name:"ddddd",
-                                              hun:"adada"
-                                          }
+                                        R(this, -1),
+                                            delete this._participants[
+                                                this._myUserID
+                                            ];
+                                          document.location.href="/www.saasguru.co"
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
