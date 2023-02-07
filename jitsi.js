@@ -994,9 +994,11 @@
                                             R(this, 1);
                                         break;
                                     case "participant-left":
-                                        return {
-                                            hello:"shit"
-                                        }; 
+                                        R(this, -1),
+                                            delete this._participants[i];
+                                            return {
+                                                hello:"shit"
+                                            }
                                         break;
                                     case "display-name-change": {
                                         const e = this._participants[i];
@@ -1038,10 +1040,11 @@
                                             this.emit("prejoinVideoChanged");
                                         break;
                                     case "video-conference-left":
-                                      return {
-                                          hello:"name",
-                                          name:"adan"
-                                      }
+                                        R(this, -1),
+                                            delete this._participants[
+                                                this._myUserID
+                                            ];
+                                          
                                         break;
                                     case "video-quality-changed":
                                         this._videoQuality = n.videoQuality;
